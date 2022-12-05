@@ -7,11 +7,11 @@ public class Auto {
     private SteeringWheel steeringWheel;
     private Body body;
 
-    public Auto(String brand, String color) {
+    public Auto(String brand, String color, Wheel wheel) {
         this.engine = new Engine();
         this.body = new Body(color);
         this.brand = brand;
-        this.wheel = new Wheel();
+        this.wheel = wheel;
         this.steeringWheel = new SteeringWheel(this.wheel);
     }
 
@@ -19,5 +19,15 @@ public class Auto {
         steeringWheel.turnRight();
         System.out.println("Машина повернула направо");
 
+    }
+
+    public Wheel getWheel() {
+        return wheel;
+    }
+
+    public void setWheel(Wheel wheel) {
+        this.wheel = wheel;
+
+        steeringWheel.setWheel(this.wheel);
     }
 }
