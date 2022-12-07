@@ -1,26 +1,29 @@
 package ObjectZoo.Zoo;
-
+import java.util.Arrays;
 public class Zoo {
 
-    Object[] animals;
+    Object[] objects;
     public Zoo() {
         //в этой строке мы еще не создаем животных
-        animals = new Object[3];
+        objects = new Object[3];
         //наполняем массив конкретными животными
-        animals[0] = new Dog();
-        animals[1] = new Cat();
-        animals[2] = new Reptile();
+        objects[0] = new Dog();
+        objects[1] = new Cat();
+        objects[2] = new Reptile();
     }
-    public void print(){
-        // Используем цикл!
-        // Каждое животное выводится по-своему!
-        for ( Object a: animals ){
-            System.out.println(a); // Object недоступин .print
-        }
+    public String toString(){  //вариант 2
+        return "Zoo: " + Arrays.toString(objects);
     }
-    //Помогает менять животных в массиве
+//    public void print(){
+//        // Используем цикл!
+//        // Каждое животное выводится по-своему!              вариант 1
+//        for ( Object a: objects){
+//            System.out.println(a); // Object недоступин .print
+//        }
+//    }
+        //Помогает менять животных в массиве
     public void changer(Object a, int i){
-        if (i>=0 && i < animals.length)
-            animals[i] =a;
+        if (i>=0 && i < objects.length)
+            objects[i] =a;
     }
 }
