@@ -3,35 +3,18 @@ package Nasledovanie;
 import java.util.Locale;
 
 public class Zombie extends Monster {
-    //    public Zombie(String name, int damege) {
-//        super(name+"монстр", damege);
-    // }
-    public static String scream = "Raaaugghhh";
-
+    //Fix this class
     public Zombie(String name) {
-
-        super(name + " the Zombie ", 5);
+        super(name + " the Zombie", 5);
     }
 
-
-    @Override
-    public void growl() {
-        System.out.print(scream);
-        super.growl();
-
-    }
-
-    public void growl(boolean loud) {
-        if (!loud) {
-            growl();
-        } else {
-            System.out.println(scream.toUpperCase());
-        }
+    public void growl(){
+        System.out.println("Raaaauuughhhh");
     }
 
     @Override
-    public void attack() {
-        super.attack();
+    public void attack(Monster monster){
+        monster.damage(getForce());
         growl();
     }
 

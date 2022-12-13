@@ -1,6 +1,6 @@
 package ObjectZoo.Zoo;
 
-public class Animal {
+abstract public class Animal {
 
     public void print(){
         System.out.println(this); // одно и тоже System.out.println(toString());

@@ -1,6 +1,6 @@
 package Nasledovanie;
 
-public class Battle {
+ public class Battle {
     final static private int MAX = 5;
 
     private Monster[] monsters;
