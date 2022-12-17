@@ -1,8 +1,6 @@
 package Nasledovanie;
 
-import java.util.Locale;
-
-public class Zombie extends Monster {
+public class Zombie extends Monster implements Fighter {
     //Fix this class
     public Zombie(String name) {
         super(name + " the Zombie", 5);
@@ -12,11 +10,11 @@ public class Zombie extends Monster {
         System.out.println("Raaaauuughhhh");
     }
 
+
+
     @Override
-    public void attack(Monster monster){
-        monster.damage(getForce());
+    public void attack(Entity entity) {
+        entity.damage(getForce());
         growl();
     }
-
-
 }
