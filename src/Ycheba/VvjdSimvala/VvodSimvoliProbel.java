@@ -5,7 +5,7 @@ package Ycheba.VvjdSimvala;
 
 import java.io.IOException;
 
-public class VvodSimvoliProbel {
+ class VvodSimvoliProbel {
     public static void main(String[] args) throws IOException {
         char ch;
         int probel = 0;

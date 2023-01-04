@@ -1,4 +1,4 @@
-public class CalculatePerimeters {
+ class CalculatePerimeters {
     public static void main(String[] args) {
         int sideLengthTriangle = 3;
         int sideLengthSquare = 4;

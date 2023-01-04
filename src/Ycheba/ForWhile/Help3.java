@@ -2,7 +2,7 @@ package Ycheba.ForWhile;
 
 import java.io.IOException;
 
-public class Help3 {
+ class Help3 {
     public static void main(String[] args) throws IOException {
         char choice, ignore;
         eXit:

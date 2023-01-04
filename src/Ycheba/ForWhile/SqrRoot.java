@@ -2,7 +2,7 @@ package Ycheba.ForWhile;
 
 // Вывод квадратных корней чисел от 1 до 99
 // вместе с ошибкой округления
-public class SqrRoot {
+ class SqrRoot {
     public static void main(String[] args) {
         double num, sroot, rerr;
 
