@@ -22,6 +22,10 @@ class MaxMinMassiv {
             if (nums[i] < min) min = nums[i];
             if (nums[i] > max) max = nums[i];
         }
+      /*  for (int v : nums) {      переписаный for-each верхнее условие
+            if (v < min) min = v;
+            if (v > max) max = v;
+        }                                      */
         System.out.println("min и max: " + min + " " + max);
     }
 }

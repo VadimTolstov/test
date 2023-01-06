@@ -10,6 +10,7 @@ class Sortirovca {
             int a, b, t;
             int size;
             size = 10; // количество сортируемых элементов
+
             // Отображение исходного массива
             System.out.print("Исходный массив:");
             for (int i = 0; i < size; i++)
