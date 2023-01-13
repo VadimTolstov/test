@@ -1,4 +1,4 @@
-package Ycheba.Class.ModDostypa;
+package Ycheba.Class.PeredachaObektovMetody;
 
 // Методам можно передавать объекты
 class Block {

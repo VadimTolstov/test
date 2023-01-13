@@ -25,8 +25,10 @@ public class Zoo {
        // Используем цикл!
             for ( Object a: objects){
                 // если объект издает звук, послушаем!
-            if (a instanceof  Sundable)
-                ((Sundable)a).sound();
+            if (a instanceof  Sundable)//если а instanceof(проверяет возращяет true) реализует интерфейс Sundable
+                ((Sundable)a).sound();//тогда приводим а к Sundable и выполняем функцию sound
+                //Тогда функция sound будет проходить по всему массиву и вызывать sound только для тех
+                //обьектов которые реализуют интерфейс Sundable
          }
     }
 

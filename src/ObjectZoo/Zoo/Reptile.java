@@ -1,14 +1,12 @@
 package ObjectZoo.Zoo;
 
-public class Reptile extends Animal{
-    public void print(){
+public class Reptile extends Animal {
+    public void print() {
         System.out.println(this);
     }
 
-      @Override
+    @Override
     public String toString() {
         return "Я класс Рептилий";
     }
 }
-
-
