@@ -7,6 +7,6 @@ public class rez {
         System.out.print(a);
         System.out.print(operat);
         System.out.print(b);
-        System.out.print("=" +summ);
+        System.out.print("=" +summ);//4654545656
     }
 }
