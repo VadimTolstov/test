@@ -1,4 +1,4 @@
-package Igri.Saxmati;
+package Igri.chess;
 
 public abstract class ChessPiece {
     String color;
