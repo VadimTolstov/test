@@ -1,4 +1,4 @@
-package Igri.Saxmati;
+package chess;
 
 public class ChessBoard {
     public ChessPiece[][] board = new ChessPiece[8][8];// creating a field for game

@@ -1,4 +1,4 @@
-package Igri.Saxmati;
+package chess;
 
 public class Horse extends ChessPiece {
     public Horse(String color) {
