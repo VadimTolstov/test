@@ -1,4 +1,4 @@
-package Igri.Saxmati;
+package Igri.chess;
 
 public class ChessBoard {
     public ChessPiece[][] board = new ChessPiece[8][8];// creating a field for game
@@ -17,7 +17,7 @@ public class ChessBoard {
             if (board[startLine][startColumn].canMoveToPosition(this, startLine, startColumn, endLine, endColumn)) {
                 board[endLine][endColumn] = board[startLine][startColumn]; // if piece can move, we moved a piece
                 board[startLine][startColumn] = null; // set null to previous cell
-                this.nowPlayer = this.nowPlayerColor().equals("White") ? "Black" : "White";
+               // this.nowPlayer = this.nowPlayerColor().equals("White") ? "Black" : "White";
 
                 return true;
             } else return false;
