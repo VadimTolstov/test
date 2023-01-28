@@ -9,13 +9,13 @@ import java.util.Scanner;
 class File4 {
     public static void main(String[] args) throws IOException {
         File directory = new File("D:\\program");
-        File file3 = new File(directory, "Test.txt");
-        System.out.println(file3.getName());// вернет имя файла
-        boolean isExists = file3.exists();// проверка есть ли файл в папке
+        File file4 = new File(directory, "Test.txt");
+        System.out.println(file4.getName());// вернет имя файла
+        boolean isExists = file4.exists();// проверка есть ли файл в папке
         System.out.println("Файл в папке: " + isExists);
 
         //подаем наш фал в сканер (сканер считывает любой поток данных)
-        Scanner scanner = new Scanner(file3);
+        Scanner scanner = new Scanner(file4);
 
 
         //считывания с файла через массив
