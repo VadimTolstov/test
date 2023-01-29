@@ -43,7 +43,7 @@ public class Horse extends ChessPiece {
     }
 
 
-    public boolean checkPos(int pos) {
+    public boolean checkPos(int pos) {   // check that our position is correct
         if (pos >= 0 && pos <= 7) return true;
         else return false;
     }
