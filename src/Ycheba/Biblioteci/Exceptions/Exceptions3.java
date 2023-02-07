@@ -7,6 +7,7 @@ import java.text.ParseException;
 // класса NumberFormat. Для этого мы заведомо дадим неправильные данные.
 class Exceptions3 {
     public static void main(String[] args) {
+
         try {
             NumberFormat nf = NumberFormat.getInstance();
             //специально создаем ситуацию, которая приведет к исключению

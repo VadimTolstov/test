@@ -7,8 +7,8 @@ public class elvis {
   //      } else {
   //          variable = variable + 10;
         int x = 7;
-        int variable = x > 10 ? (x-10) : (x+10);
-        System.out.println(variable);
+        x = x > 10 ? x-10 : x+10;
+        System.out.println(x);
     }
 }
 
