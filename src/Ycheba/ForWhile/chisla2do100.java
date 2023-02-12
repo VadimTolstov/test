@@ -1,3 +1,5 @@
+package Ycheba.ForWhile;
+
 public class chisla2do100 {
     public static void main(String[] args) {
 

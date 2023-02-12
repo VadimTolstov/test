@@ -1,3 +1,5 @@
+package Ycheba.IfSwitch;
+
 public class desifrator {
     public static void main(String[] args) {
         char ch1 = 'h';

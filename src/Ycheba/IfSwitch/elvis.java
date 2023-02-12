@@ -1,3 +1,5 @@
+package Ycheba.IfSwitch;
+
 public class elvis {
     public static void main(String[] args) {
         // Одно и тоже но через тернарного оператора

@@ -1,3 +1,5 @@
+package Ycheba.ForWhile;
+
 public class Loaderr {
     private static int source = 30;
     private static int receiver = 0;

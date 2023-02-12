@@ -1,3 +1,5 @@
+package Ycheba.IfSwitch;
+
 import java.util.Scanner;
 
 public class svetofor {

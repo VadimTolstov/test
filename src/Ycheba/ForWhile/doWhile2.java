@@ -1,4 +1,6 @@
-public class doWhile {
+package Ycheba.ForWhile;
+
+public class doWhile2 {
     public static void main(String[] args) {
         int i = 10;
         do {

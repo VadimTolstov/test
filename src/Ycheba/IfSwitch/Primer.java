@@ -1,3 +1,5 @@
+package Ycheba.IfSwitch;
+
 public  class Primer {
     public static void findMedian(int a, int b, int c) {
         if ((a >= b && a <= c) || (a >= c) && a <= b) System.out.println(a); // if a is median
