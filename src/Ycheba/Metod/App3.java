@@ -40,7 +40,7 @@ public class App3 {
     public static String getHiddenCard(String cardNumber) {
         return App3.getHiddenCard(cardNumber, 4);
     }
-        }
+}
 
 
 

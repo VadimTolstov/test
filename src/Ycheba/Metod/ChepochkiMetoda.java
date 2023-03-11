@@ -23,5 +23,15 @@ class ChepochkiMetoda {
         var name2 = "Woit much is the fish?  \n ";
         name2 = name2.trim().replace("?", "").replace(" ", "-").toLowerCase();
         System.out.println(name2);
+
+
+        String result = "34.1 -118.33\n<!--ABCDEFG-->";
+
+        System.out.println(result.substring(0, result.indexOf('\n')));
+        System.out.println(result.split("\n", 2)[0]);
+
+
     }
+
+
 }
