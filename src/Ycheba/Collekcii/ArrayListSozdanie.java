@@ -212,7 +212,7 @@ public class ArrayListSozdanie {
         System.out.println("Метод equals перезаписан и сравнивает нормально порядок элементов  влияет!!!!!!!!!" + l5.equals(l4));//equals перезаписан и сравнивает нормально порядок элементов  влияет!!!!!!!!!
         System.out.println();
 
-//С помощью Iterator мы можем удалять элемент листа, а с помощью форичь нет
+        //С помощью Iterator мы можем удалять элемент листа, а с помощью форичь нет
         Iterator<String> it = l5.iterator();//сможем пробежаться по элементам листа---------------------
         while (it.hasNext()) {//hasNext есть ли следующий элемент или нет------------да то дальше
             System.out.println(it.next());///next выводит данные на экран----------------
@@ -225,3 +225,126 @@ public class ArrayListSozdanie {
     }
 
 }
+
+class Test2 {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {1, 2, 3, 4,};
+
+        char[] array3 = {'p', 'r', 'i', 'v', 'e', 't'};
+        char[] array4 = {'p', 'r', 'i', 'v', 'e', 'v', 'k', 'a'};
+        char[] array5 = null;
+
+        System.out.println(Arrays.compare(array1, array2)); // когда compare сравнивает массивы если 1 больше второго возвращает  1 если меньше -1 равны 0
+        System.out.println(Arrays.compare(array3, array4)); // когда compare сравнивает массивы если 1 больше второго возвращает  1 если меньше -2 равны 0
+        System.out.println(Arrays.compare(array3, array5)); // когда compare сравнивает c null то null всегда меньше
+
+
+        //mismatch находит первый индекс расхождения
+        System.out.println(Arrays.mismatch(array2, array1));// mismatch вернет индекс первого расхождения (с какокого индекса они перестают быть одинаковы
+        System.out.println(Arrays.mismatch(array3, array4)); // так же и для char
+    }
+}
+
+class Test1 {
+    public static void main(String[] args) {
+        ArrayList<String> al1 = new ArrayList<>();
+        al1.add("one");
+        al1.add("two");
+        al1.add("three");
+        al1.add("four");
+        al1.add("five");
+        System.out.println("all = " + al1);
+
+        ArrayList<String> al3 = new ArrayList<>();
+        al3.add("one");
+        al3.add("two");
+        al3.add("three");
+        al3.add("four");
+        al3.add("five");
+
+        ArrayList<String> al2 = new ArrayList<>();
+        al2.add("one");
+        al2.add("three");
+        al2.add("four");
+        al2.add("ten");
+
+        al1.removeAll(al2);//removeAll удалит с al1 все элементы которые есть в al2 и al1-----------
+        System.out.println("al1  removeAll = " + al1);
+
+        al3.retainAll(al2);//retainAll удалит с al3 все элементы которых нет в al1 и al2--------
+        System.out.println("al3 retainAll = " + al3);
+
+        boolean result = al1.contains(al2);//result содержит ли al1 все элементы al2 вернет false если не содержит и true если содержит------------
+        System.out.println("result = " + result);
+
+        ArrayList<String> al4 = new ArrayList<>();
+        al4.add("one");
+        al4.add("two");
+        al4.add("three");
+        al4.add("four");
+        al4.add("five");
+        System.out.println("al4 = " + al4);
+
+        List<String> subList = al4.subList(1, 4);//subList возвращает отрывок уже List (я хочу что бы элементы с 1-го по 4 не включительно можно было увидеть ArrayList с помощью представления subList
+        System.out.println("subList = " + subList);
+        subList.add("zen");// добавляем в subList новую запись -----> но в обратную сторону не работает - выдаст ошибку
+        System.out.println("al4 = " + al4); // видим что запись добавилась и в al4
+        System.out.println("subList = " + subList);// наш subList это представления al4 а именно его элементов
+
+        ArrayList<String> al5 = new ArrayList<>();
+        al5.add("one");
+        al5.add("two");
+        al5.add("three");
+        al5.add("four");
+        al5.add("five");
+        String[] array = al5.toArray(new String[15]);
+        System.out.print("array = ");
+        for (String s : array) {
+            System.out.print(s + " ");
+        }
+    }
+}
+
+class Test3ListOf {
+    public static void main(String[] args) {
+        ArrayList<String> al1 = new ArrayList<>();
+        al1.add("one");
+        al1.add("two");
+        al1.add("three");
+        al1.add("four");
+        al1.add("five");
+        List<String> list = List.of("odin", "dva", "tri");//этот лист нельзя изменить не могут содержать null----------------
+        System.out.println("list = " + list);
+
+        List<String> list2 = List.copyOf(al1);//копируем лист не могут содержать null -------------------
+        System.out.println("list2 = " + list2);
+    }
+}
+
+class Test4 {
+    public static void main(String[] args) {
+        ArrayList al1 = new ArrayList();//плохо писать без <> типа безопасность
+        al1.add("one");
+        al1.add("two");
+        al1.add("three");
+        al1.add("four");
+        al1.add("five");
+        for (Object o : al1) {
+            System.out.println("Number = " + o + " and length = " + ((String) o).length());
+        }
+    }
+}
+
+class Test5Map {
+    public static void main(String[] args) {
+        Map<Integer, String> map = new HashMap<>();
+        map.put(777, "Ivanov Mikhail");//добавляем элемент----------
+        map.put(778, "Tregulov Zaur");
+        map.put(779, "Sidorova Mariya");
+        map.put(780, "Petrov Petr");
+        map.put(777, "Roberto Karlos"); //перезатрет запись с таким же ключом
+        map.remove(779);//удаляем элемент--------------
+        System.out.println("map = " + map);
+        }
+    }
